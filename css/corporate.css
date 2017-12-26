@@ -1,0 +1,51 @@
+.section-corporate-landing {
+    height: 100vh !important;
+    background: url('../images/corporate-bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-about-corporate-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5em;
+    width: 100%;
+    margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .section-about-corporate-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.corporate-img {
+    width: 100%;
+    height: auto;
+    margin: 15px 0;
+}
+
+.cform {
+    display: grid;
+    width: 90%;
+    height: 80%;
+    grid-gap: 1em;
+    margin: auto;
+}
+
+.center-title {
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Dancing Script', sans-serif !important;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.corporate-input {
+    color: #000;
+    padding: 5px;
+    border: 0;
+    border-bottom: 1px solid #aaa;
+}

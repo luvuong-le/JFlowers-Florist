@@ -1,0 +1,114 @@
+@import url("modal.css");
+
+.section-gallery {
+    height: 100vh !important;
+    background: url('../images/gallery/gallery-bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-about-gallery-wrapper {
+    text-align: center;
+    margin: 2em auto;
+    width: 70%;
+}
+
+/* -----------------------------------------------------------------
+Gallery Grid CSS
+--------------------------------------------------------------------*/
+
+.section-gallery-images-group-1, .section-gallery-images-group-2{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 0.5em;
+    margin: 1em 0;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-img:hover {
+    opacity: 0.2;
+    transition: 0.4s linear;
+    cursor: pointer;
+}
+
+.image-wrapper-group-1, .image-wrapper-group-2 {
+    height: 100%;
+    width: 100%;
+}
+
+.image-wrapper-group-1:first-of-type {
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+.image-wrapper-group-2:last-of-type {
+    grid-column: 2/4;
+    grid-row: 2/4;
+}
+
+.text {
+   color: #000;
+   font-size: 3em;
+   font-weight: bold;
+   text-transform: uppercase;
+}
+
+.image-overlay {
+    color: #fff;
+    position: relative;
+    top: -70%;
+    background: #000;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    height: 9em;
+    padding: 10px;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.image-wrapper-group-1:hover .image-overlay,  .image-wrapper-group-2:hover .image-overlay {
+    visibility: visible;
+    animation: lightSpeedIn 0.5s linear; 
+}
+
+@keyframes lightSpeedIn {
+    from {
+      transform: translate3d(100%, 0, 0) skewX(-30deg);
+      opacity: 0;
+    }
+  
+    60% {
+      transform: skewX(20deg);
+      opacity: 1;
+    }
+  
+    80% {
+      transform: skewX(-5deg);
+      opacity: 1;
+    }
+  
+    to {
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+@media screen and (max-width: 700px) {
+    .section-gallery-images-group-1, .section-gallery-images-group-2{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0.5em;
+    }
+
+    .image-wrapper-group-1, .image-wrapper-group-2 , .image-wrapper-group-1:first-of-type, .image-wrapper-group-2:last-of-type {
+        grid-column: initial;
+        grid-row: initial;
+    }
+}

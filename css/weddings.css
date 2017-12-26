@@ -1,0 +1,38 @@
+@import url("gift.css");
+
+.section-wedding-items {
+    height: 70vh !important;
+    background: url('../images/weddings/wedding-bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-gallery-images-group-1 {
+    width: 100% !important;
+    grid-gap: 0.5em;
+}
+
+.image-overlay {
+    background: url('../images/weddings/wedding-img-overlay-bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.5em;
+    color: #000;
+    font-weight: bold;
+}
+
+.image-overlay * {
+    text-align: right;
+}
+
+.gift-link-wrapper {
+    margin: 1.5em 0;
+}
+
+.gift-link {
+    color: #000;
+    border: 1px solid #000;
+    background: #fff;
+}

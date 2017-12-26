@@ -1,0 +1,29 @@
+@import url("gift.css");
+
+.section-christmas-items {
+    height: 70vh !important;
+    background: url('../images/christmas/christmas-bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-gallery-images-group-1 {
+    width: 100% !important;
+    grid-gap: 0.5em;
+}
+
+.image-overlay {
+    background: url('../images/christmas/christmas-bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.5em;
+    height: auto;
+}
+
+@media screen and (max-width: 1300px) {
+    .image-overlay {
+        height: auto !important;
+    }
+}

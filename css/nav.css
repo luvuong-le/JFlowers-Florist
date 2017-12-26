@@ -1,0 +1,96 @@
+/* -----------------------------------------------------------------
+Navigation Bar 
+--------------------------------------------------------------------*/
+
+.navbar {
+    display: grid;
+    position: fixed;
+    grid: "brand brand header header header" 100% / 1fr 1fr 1fr 1fr 1fr;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+    /* top: 1em; */
+    padding: 10px;
+    z-index: 1;
+}
+
+.brand-wrapper {
+    text-align: center;
+    grid-area: brand;
+}
+
+.brand {
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Dancing Script', sans-serif !important;
+    text-transform: uppercase;
+}
+
+.nav-list {
+    grid-area: header;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav-item {
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.nav-item:hover {
+    opacity: 0.5;
+}
+
+.nav-item::after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid #fff;
+    width: 0;
+    transform: scaleX(0);
+    transition: transform 0.2s linear;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+    transform: scaleX(1);
+}
+
+
+/* -----------------------------------------------------------------
+Drop Down Navigation 
+--------------------------------------------------------------------*/
+
+.dropdown-nav {
+    position: absolute;
+    top: 100%;
+    background: #333;
+    list-style: none;
+    display: none;
+    animation: flipIn 0.2s ease-in;
+}
+
+@keyframes flipIn {
+    0% {
+        transform: rotateY(70deg);
+    }
+    50% {
+        transform: translateY(45deg);
+    }
+    100% {
+        transform: translateY(0deg);
+    }
+}

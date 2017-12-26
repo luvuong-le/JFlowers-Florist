@@ -1,0 +1,101 @@
+@import url("animate.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* -----------------------------------------------------------------
+Common Styles 
+--------------------------------------------------------------------*/
+
+.section {
+    width: 100%;
+    height: 100%;
+}
+
+.section-about, .section-gallery-images-group-1 {
+    padding-top: 3em;
+}
+
+.section-content {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.italic-content {
+    color: lightcoral;
+    font-weight: bolder;
+    font-family: 'Dancing Script', sans-serif;
+}
+
+.section-landing-info-content {
+    position: absolute;
+    text-align: center;
+    top: 10em;
+    left: 10em;
+    width: 30%;
+    height: auto;
+    background: #ffffff;
+    opacity: 0.6;
+    padding: 2em;
+    border-radius: 0.5em;
+    text-transform: uppercase;
+}
+
+.link-content {
+    color: #000;
+    padding: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 20%;
+    border: 2px solid #000;
+    width: 100%;
+    position: relative;
+    top: 3em;
+    background: #fff;
+    opacity: 0.9;
+}
+
+.link-content:hover {
+    animation: zoomInFast 1s infinite;
+}
+
+@keyframes zoomInFast {
+    0% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.side-nav {
+    overflow-x: hidden;
+    width: 0;
+}
+
+.read-more {
+    cursor: pointer;
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    background: #ffffff;
+    opacity: 0.6;
+    padding: 1em 2em;
+    border-radius: 0.5em;
+}
+
+.read-more:hover {
+    animation: pulse 0.5s infinite;
+}
