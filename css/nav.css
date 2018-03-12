@@ -38,6 +38,10 @@ Navigation Bar
     font-weight: bold;
 }
 
+.nav-list > li:first-child {
+    position: relative;
+}
+
 .nav-item {
     display: inline-block;
     padding: 5px;
@@ -77,6 +81,7 @@ Drop Down Navigation
 .dropdown-nav {
     position: absolute;
     top: 100%;
+    margin-top: 21px;
     background: #333;
     list-style: none;
     display: none;
